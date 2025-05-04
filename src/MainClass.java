@@ -1,24 +1,21 @@
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
 import java.awt.FlowLayout;
+import javax.swing.JFrame;
 
-public class MainClass {
+
+public class MainClass extends TurtleGraphics {
+
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                TurtleGraphics turtlePanel = new TurtleGraphics();
+        new MainClass();
+    }
 
-                JFrame mainFrame = new JFrame("OOP Assignment 1: Turtle Graphics");
-                mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                mainFrame.setLayout(new FlowLayout());
-                mainFrame.add(turtlePanel);
-
-                mainFrame.pack();
-                mainFrame.setLocationRelativeTo(null);
-                mainFrame.setVisible(true);
-            }
-        });
+    public MainClass() {
+        JFrame mainFrame = new JFrame("Turtle Graphics");
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setLayout(new FlowLayout());
+        mainFrame.add(this);
+        mainFrame.pack();
+        mainFrame.setVisible(true);
+        about();
     }
 }
