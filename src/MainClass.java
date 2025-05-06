@@ -3,11 +3,12 @@ import javax.swing.JFrame;
 
 
 public class MainClass extends TurtleGraphics {
-
+    
 
     public static void main(String[] args) {
-        new MainClass();
+        new MainClass(); // Create instance of class that extends TurtleGraphics
     }
+    
 
     public MainClass() {
         JFrame mainFrame = new JFrame("Turtle Graphics");
